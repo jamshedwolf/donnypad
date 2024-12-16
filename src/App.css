@@ -1,0 +1,12 @@
+.bgg{
+
+    background-image: url("assets/c1.svg");
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Set width */
+    height: 100vh; /* Optional: Full viewport height */
+}
+.body{
+    background-color: #F9E8C9;
+}
