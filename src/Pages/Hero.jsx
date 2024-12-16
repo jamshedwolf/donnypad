@@ -9,203 +9,269 @@ import arrows from "../assets/arrows.svg";
 import chrt from "../assets/chrt.svg";
 import filter from "../assets/fylter.svg";
 import lines from "../assets/three lins.svg";
-import { IoIosTrendingUp } from "react-icons/io";
+import cat from "../assets/cat.png";
+import tiger from "../assets/tiger.png";
+import ai from "../assets/ai.png";
+
+import { IoRocketOutline, IoFlagOutline } from "react-icons/io5";
 import { HiOutlineChartSquareBar } from "react-icons/hi";
-import { IoFlagOutline } from "react-icons/io5";
 import { GoQuestion } from "react-icons/go";
-import { IoRocketOutline } from "react-icons/io5";
+import { BiTrendingUp } from "react-icons/bi";
 
 const cardData = [
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    img: cat,
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
     amount: "$58K",
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
   },
   // Add more objects here for additional cards...
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    img: ai,
+
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
     amount: "$58K",
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
+    live: true,
   },
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
+    img: tiger,
+
     amount: "$58K",
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
   },
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
     amount: "$58K",
+    img: cat,
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
   },
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
     amount: "$58K",
+    img: ai,
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
   },
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
     amount: "$58K",
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
+    img: cat,
+    live: true,
   },
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
     amount: "$58K",
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
+    img: ai,
   },
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
     amount: "$58K",
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
+    img: tiger,
   },
   {
     title: "SXC SpaceX Cats Coin",
-    description: "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
+    description:
+      "💰 Dive into the world of crypto coins!🚀\nWith digital currencies like Bitcoin and E...",
     percentage: "98.8%",
     amount: "$58K",
     transactions: "5,888 txns",
     progress: "68.8%",
-    icons: [s1, s2, s3,s4],
+    icons: [s1, s2, s3, s4],
+    img: tiger,
+    live: true,
   },
 ];
 
+const Button = ({ className, icon, label }) => (
+  <button
+    className={`px-4 py-2 rounded-md text-sm md:text-base flex items-center gap-2 ${className}`}
+  >
+    {label} {icon}
+  </button>
+);
+
 function Hero() {
   return (
-    <div className="px-4">
-      <header className="bg-[#F9E8C9]  py-3">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-800">Donny Pad</h1>
-            <p className="text-gray-600 text-[18px]">
-              Home of the live stream memes, managed & moderated by the community
+    <div className="p-4 md:p-8">
+      <header className="bg-[#F9E8C9] mb-6">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-center space-y-4 md:space-y-0">
+          <div className="text-center md:text-left">
+            <h1 className="text-3xl md:text-2xl font-bold text-gray-800">
+              Donny Pad
+            </h1>
+            <p className="text-gray-600 text-base md:text-lg">
+              Home of the live stream memes, managed & moderated by the
+              community
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-2 md:gap-4">
-            <button className="hover:bg-[#00A85C] border hover:text-white flex items-center justify-center gap-2 border-[#00A85C] text-[#00A85C] px-3 py-[6px] rounded-lg text-[18px] transition">
-              <GoQuestion />
-              How Does It Work
-            </button>
-            <button className="bg-[#00A85C] hover:bg-[#00A85C] flex items-center justify-center gap-2 text-white px-3 py-[6px] rounded-lg text-[18px] transition">
-              <IoRocketOutline />
-              Launch Your Own Token
-            </button>
+          <div className="flex flex-wrap items-center gap-3 md:gap-4">
+            <Button
+              className="hover:bg-[#00A85C] border hover:text-white border-[#00A85C] text-[#00A85C]"
+              icon={<GoQuestion />}
+              label="How Does It Work"
+            />
+            <Button
+              className="bg-[#00A85C] hover:bg-[#007A48] text-white"
+              icon={<IoRocketOutline />}
+              label="Launch Your Own Token"
+            />
           </div>
         </div>
-        <div className="mt-4 flex text-[15px]  flex-row gap-2 items-center ">
-          <div className="grid grid-cols-2 gap-2 flex-[.2]">
-            <button className="bg-[#00A85C] hover:bg-[#00A85C] flex gap-2 items-center text-white px-3 py-[6px] rounded-md text-[18px]">
-              <img src={lines} alt="" className="" />
-              Sort By
-            </button>
-            <button className="bg-[#00A85C] hover:bg-[#00A85C] text-white px-3 py-1 rounded-md text-[18px] flex items-center gap-1">
-              <img src={filter} alt="" className="" />
-              Filters
-            </button>
+
+        <div className="mt-6 flex flex-col md:flex-row gap-4">
+          <div className="flex items-center gap-4">
+            <Button
+              className="bg-[#00A85C] hover:bg-[#007A48] text-white"
+              label="Sort By"
+              icon={<img src={lines} alt="" />}
+            />
+            <Button
+              className="bg-[#00A85C] hover:bg-[#007A48] text-white"
+              icon={<img src={filter} alt="" />}
+              label="Filters"
+            />
           </div>
-          <div className="flex flex-[.8] flex-wrap p-1  bg-[#FBF0DB] w-full rounded-lg gap-2">
-            <button className="bg-[#E3D3B7]  hover:bg-[#E3d3b7] flex items-center justify-center gap-2 text-gray-700 px-3 py-1 rounded-md text-[18px]">
-              Trending
-              <IoIosTrendingUp />
-            </button>
-            <button className=" hover:bg-[#E3d3b7] flex items-center justify-center gap-2 text-gray-700 px-3 py-1 rounded-md text-[18px]">
-              Top <HiOutlineChartSquareBar />
-            </button>
-            <button className=" hover:bg-[#E3d3b7] flex items-center justify-center gap-2 text-gray-700 px-3 py-1 rounded-md text-[18px]">
-              Rising
-              <img src={chrt} alt="" className="" />
-            </button>
-            <button className=" hover:bg-[#E3d3b7] flex items-center justify-center gap-2 text-gray-700 px-3 py-1 rounded-md text-[18px]">
-              Finalized
-              <IoFlagOutline />
-            </button>
+          <div className="flex flex-wrap p-1 bg-[#FBF0DB] w-full rounded-lg gap-3 md:gap-4 flex-[0.8]">
+            <Button
+              className="bg-[#E3D3B7] hover:bg-[#CBB38F] text-gray-700"
+              label="Trending"
+              icon={<BiTrendingUp />}
+            />
+            <Button
+              className="hover:bg-[#CBB38F] text-gray-700"
+              label="Top"
+              icon={<HiOutlineChartSquareBar />}
+            />
+            <Button
+              className="hover:bg-[#CBB38F] text-gray-700"
+              label="Rising"
+              icon={<img src={chrt} alt="" />}
+            />
+            <Button
+              className="hover:bg-[#CBB38F] text-gray-700"
+              label="Finalized"
+              icon={<IoFlagOutline />}
+            />
           </div>
         </div>
       </header>
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="bg-[#E3D3B7] flex flex-col h-[178px] w-[400px] gap-5 rounded-lg shadow-sm p-2"
+            className="bg-[#E3D3B7] flex flex-col gap-6 rounded-lg shadow-md p-4"
           >
-            {/* Top Section */}
-            <div className="flex gap-2 justify-between ">
-              <div className="relative  bgg rounded-lg h-[90px] w-[90px] border flex-[.3]">
-                <div className="absolute bottom-[-10px] rounded-full left-[5%] w-[90%] border-white text-[8px] flex items-center justify-center border-[1px] text-white py-1 bg-[#B1A58F]">
-                  Live stream daily 4 pm
-                </div>
-                <div className="w-4 h-4 absolute top-[-7px] overflow-hidden rounded-full border-red-600 right-[-7px] border ">
-                  <img src={c1} alt="" className="w-full h-full" />
-                </div>
+            <div className="flex gap-4 justify-between items-start">
+              <div className="relative rounded-lg h-24 w-24 border flex-shrink-0 ">
+                <img
+                  src={card.img}
+                  alt=""
+                  className="object-cover rounded-lg"
+                />
+                {card.live && (
+                  <>
+                    <div className="absolute bottom-[-10px] left-2/4 transform -translate-x-2/4 rounded-full w-[95%] border-white text-[6px]  text-center border text-white p-1 bg-[#B1A58F]">
+                      Live stream daily 4 pm
+                    </div>
+                    <div className="w-5 h-5 absolute top-[-7px] right-[-7px] overflow-hidden rounded-full border-red-600 border">
+                      <img src={c1} alt="" className="w-full h-full" />
+                    </div>
+                  </>
+                )}
               </div>
-              <div className="flex flex-[.8] 8gap-2 flex-col">
-                <div className="flex gap-1 items-center ">
-                  <h3 className="font-bold truncate w-48 text-[18px] text-[#1D1F22]">
-                    {card.title}
+              <div className="flex-1 space-y-2">
+                <div className="flex items-center justify-between flex-wrap">
+                  <h3 className="font-bold truncate text-lg text-[#1D1F22]">
+                    {card.title.slice(0, 10)}...
                   </h3>
-                  <div className="flex gap-1 items-center justify-center">
-                    {card.icons.map((icon, i) => (
-                      <img key={i} src={icon} alt="" className="w-5 h-5" />
-                    ))}
-                  </div>
+                  {card.live ? (
+                    <svg
+                      width="21"
+                      height="20"
+                      viewBox="0 0 21 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="10.6666" cy="10" r="10" fill="#FBF0DB" />
+                      <circle cx="10.6666" cy="10" r="8" fill="#FCF4E6" />
+                      <circle cx="10.6666" cy="10" r="4" fill="#F04438" />
+                    </svg>
+                  ) : (
+                    <div className="flex gap-1">
+                      {" "}
+                      {[s1, s2, s3, s4].map((icon) => (
+                        <img src={icon} className="w-4 cursor-pointer" />
+                      ))}
+                    </div>
+                  )}
                 </div>
-                <p className="text-[13px] font-semibold  text-[#6C7275] ">
+                <p className="text-sm font-semibold text-[#6C7275]">
                   {card.description}
                 </p>
               </div>
             </div>
-
-            {/* Metrics */}
-            <div className=" p-2  font-semibold rounded-lg bg-[#F9E8C9]">
-              <div className="flex items-center justify-between mb-2">
+            <div className="p-4 font-semibold rounded-lg bg-[#F9E8C9] space-y-2">
+              <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <img src={sol} alt="" className="" />
+                  <img src={sol} alt="" className="w-5 h-5" />
                   <span className="text-sm font-semibold text-[#00A85C]">
                     {card.percentage}
                   </span>
                   <span className="text-sm text-[#6C7275]">{card.amount}</span>
                 </div>
                 <div className="flex items-center gap-1 text-sm text-[#6C7275]">
-                  <img src={arrows} alt="" className="" />
+                  <img src={arrows} alt="" className="w-4 h-4" />
                   <span>{card.transactions}</span>
                 </div>
               </div>
-
-              {/* Progress Bar */}
               <div className="w-full bg-[#E8F5E9] h-2 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-[#00A85C] rounded-full"
+                  className="h-full bg-[#00A85C]"
                   style={{ width: card.progress }}
                 ></div>
               </div>

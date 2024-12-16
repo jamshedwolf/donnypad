@@ -1,18 +1,16 @@
-import React from 'react';
-import Sidebar from './Sidebar';
+import React from "react";
+import Sidebar from "./Sidebar";
 
 function Layout({ children }) {
   return (
-    <div className="mx-auto bg-[#F9E8C9] flex gap-5">
+    <div className="bg-[#F9E8C9] flex h-screen overflow-hidden">
       {/* Sidebar */}
-      <div className="flex-[.2] ">
+      <div className="h-full">
         <Sidebar />
       </div>
 
       {/* Main Content */}
-      <div className="content flex-[.8] ">
-        {children}
-      </div>
+      <div className="content flex-1 overflow-auto ">{children}</div>
     </div>
   );
 }
