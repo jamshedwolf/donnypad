@@ -149,17 +149,19 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 md:gap-4">
-            <Button
-              className="hover:bg-[#00A85C] border hover:text-white border-[#00A85C] text-[#00A85C]"
-              icon={<GoQuestion />}
-              label="How Does It Work"
-            />
-            <Button
-              className="bg-[#00A85C] hover:bg-[#007A48] text-white"
-              icon={<IoRocketOutline />}
-              label="Launch Your Own Token"
-            />
-          </div>
+  {/* Button 1: How Does It Work */}
+  <button className="hover:bg-[#00A85C] border hover:text-white flex items-center gap-2 border-[#00A85C] text-[#00A85C] px-4 py-2 rounded-lg text-sm md:text-base transition">
+    <GoQuestion className=" hover:text-white" />
+    <span>How Does It Work</span>
+  </button>
+
+  {/* Button 2: Launch Your Own Token */}
+  <button className="bg-[#00A85C] hover:bg-[#007A48] flex items-center gap-2 text-white px-4 py-2 rounded-lg text-sm md:text-base transition">
+    <IoRocketOutline className="text-white" />
+    <span>Launch Your Own Token</span>
+  </button>
+</div>
+
         </div>
 
         <div className="mt-6 flex flex-col md:flex-row gap-4">
