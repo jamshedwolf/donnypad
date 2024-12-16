@@ -29,7 +29,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-screen bg-[#F9E8C9] flex flex-col justify-between border-r border-gray-200 p-4 z-40 transform ${
+        className={`fixed top-0 left-0 h-screen bg-[#F9E8C9] flex flex-col justify-between border-r border-r-[#E3D3B7] p-4 z-40 transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out md:translate-x-0 md:static md:flex`}
       >
@@ -51,7 +51,7 @@ const Sidebar = () => {
 
           {/* Navigation */}
           <nav>
-            <ul className="space-y-3 text-[#3E3D3B]">
+            <ul className="space-y-3 font-semibold text-[#3E3D3B]">
               <li className="flex items-center justify-between hover:cursor-pointer">
                 <span className="flex gap-2">
                   <img src={lines} alt="" />
@@ -83,9 +83,9 @@ const Sidebar = () => {
           </nav>
 
           {/* Section: Tipped Memes */}
-          <div className="mt-6 border-t border-t-[#F9E8C9]">
-            <h3 className="text-sm font-semibold mb-2 text-gray-600">Tipped Memes</h3>
-            <ul className="space-y-2 text-[#3E3D3B] text-sm">
+          <div className="mt-6 font-semibold border-t border-t-[#F9E8C9]">
+            <h3 className="font-semibold mb-2 text-gray-600">Tipped Memes</h3>
+            <ul className="space-y-2 text-[#3E3D3B] ">
               <li className="flex items-center gap-2">
                 <span>
                   <img src={coincrz} alt="" />

@@ -5,7 +5,7 @@ function Layout({ children }) {
   return (
     <div className="mx-auto bg-[#F9E8C9] flex gap-5">
       {/* Sidebar */}
-      <div className="flex-[.2] border">
+      <div className="flex-[.2] ">
         <Sidebar />
       </div>
 
