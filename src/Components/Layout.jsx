@@ -1,16 +1,22 @@
 import React from "react";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Nav";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 function Layout({ children }) {
   return (
-    <div className="bg-[#F9E8C9] flex h-screen overflow-hidden">
-      {/* Sidebar */}
-      <div className="h-full">
-        <Sidebar />
-      </div>
+    <div className=" relative overflow-hidden text-white   ">
+   
+     
+      <div className="z-50 absolute w-full">
+      <Nav />
+      </div> 
+      
 
       {/* Main Content */}
-      <div className="content flex-1 overflow-auto ">{children}</div>
+      <div className="text-white lg:pt-20  ">{children}</div>
+      <Footer />
+      
     </div>
   );
 }
